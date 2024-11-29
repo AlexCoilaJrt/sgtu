@@ -1,95 +1,126 @@
-SGTU - Sistema de Gestión de Títulos Universitarios
-Una aplicación Flutter para gestionar eficientemente los títulos universitarios.
+Sistema de Gestión de Títulos Universitarios (SGTU)
+Una solución integral para la administración eficiente de títulos universitarios.
 
-📖 Descripción del Proyecto
-El Sistema de Gestión de Títulos Universitarios (SGTU) es una aplicación desarrollada en Flutter para administrar, registrar y consultar información relacionada con los títulos universitarios.
-Diseñado para trabajar sin conexión a internet, utiliza una base de datos local para garantizar rapidez y accesibilidad.
 
-📂 Estructura del Proyecto
-El proyecto sigue una arquitectura modular basada en el patrón BLoC (Business Logic Component), lo que asegura:
+Tabla de Contenidos
+Descripción del Proyecto
+Características Principales
+Arquitectura del Proyecto
+Frontend (Flutter)
+Backend (Node.js)
+Tecnologías Utilizadas
+Instrucciones de Instalación
+Frontend
+Backend
+Despliegue
+Contribuidores
+Descripción del Proyecto
+El Sistema de Gestión de Títulos Universitarios (SGTU) es una plataforma que combina una aplicación Flutter para la gestión de usuarios y datos, con un backend en la nube implementado en Node.js, desplegado en Vercel y respaldado por Supabase.
 
-Separación entre la interfaz de usuario (UI) y la lógica de negocio.
-Fácil mantenimiento y escalabilidad.
-🔑 Carpetas Principales
-apis: Interfaces para la comunicación con servicios externos (en caso de expandir el proyecto).
-bloc: Contiene la lógica del negocio con eventos, estados y blocs.
-comp: Componentes reutilizables como botones, barras de navegación, formularios, etc.
-drawer: Implementación del menú lateral de navegación.
-modelo: Clases modelo que representan la estructura de datos.
-repository: Implementa operaciones CRUD para la base de datos local.
-ui: Pantallas y widgets para la interfaz de usuario.
-util: Funciones y configuraciones globales.
-💻 Tecnologías Utilizadas
-Flutter: Framework principal para la interfaz de usuario.
-Dart: Lenguaje de programación base del proyecto.
-Sqflite: Biblioteca para la gestión de la base de datos SQLite.
-BLoC: Patrón para la gestión del estado.
-Material Design: Principios para un diseño visual intuitivo.
-🛠 Proceso de Desarrollo
-1. Diseño de la Arquitectura
-   El proyecto utiliza el patrón MVC (Modelo-Vista-Controlador), adaptado con BLoC:
+Esta herramienta busca optimizar procesos administrativos, ofreciendo una experiencia moderna y funcional tanto offline como online.
 
-Modelo: Representa las estructuras de datos (e.g., alumno, curso).
-Vista: Pantallas y widgets para interactuar con el usuario.
-Controlador (BLoC): Maneja la lógica del negocio y el flujo de datos.
-2. Implementación de la Base de Datos
-   La base de datos está diseñada para trabajar de manera local con Sqflite.
-   Tablas principales:
+Características Principales
+✅ CRUD completo para la gestión de:
 
-Programas Académicos: Carreras ofrecidas.
-Cursos: Asignaturas detalladas.
-Inscripciones: Registro de estudiantes inscritos.
-Notas: Calificaciones de los estudiantes.
-Exámenes de Grado: Evaluaciones finales.
-3. Creación de la Interfaz de Usuario
-   El diseño sigue los principios de Material Design, con las siguientes pantallas clave:
+Usuarios
+Programas académicos
+Tesis
+Evaluaciones
+✅ Diseño modular con arquitectura escalable.
+✅ Gestión Offline/Online con sincronización de datos.
+✅ Seguridad: Autenticación basada en JWT.
+✅ Despliegue en la nube con Vercel para el backend.
+✅ Base de datos Supabase, optimizada para alto rendimiento.
 
-Inicio: Acceso rápido a las funciones principales.
-Formularios: Para crear y editar registros.
-Listados: Tablas o listas para mostrar la información almacenada.
-4. Gestión del Estado
-   Se utiliza el patrón BLoC para manejar la comunicación entre la UI y la base de datos:
+Arquitectura del Proyecto
+Frontend (Flutter)
+El frontend está construido usando Flutter y sigue una arquitectura modular basada en BLoC (Business Logic Component).
 
-Eventos: Acciones como agregar, editar o eliminar.
-Estados: Muestran el resultado de las acciones (éxito, error, etc.).
-5. Pruebas y Depuración
-   El proyecto incluye pruebas para garantizar:
-
-Correcta inserción, edición y eliminación de datos.
-Sincronización efectiva entre la interfaz y la base de datos.
-📦 Instrucciones de Instalación
-1. Clonar el Repositorio
-   bash
-   Copiar código
-   git clone https://github.com/tu-usuario/sgtu.git
-   cd sgtu
-2. Instalar Dependencias
-   Asegúrate de tener Flutter instalado y ejecuta:
+Estructura de Carpetas:
 
 bash
 Copiar código
-flutter pub get
-3. Ejecutar la Aplicación
-   Usa este comando para iniciar la aplicación en un emulador o dispositivo físico:
+├── apis/               # Interfaces de comunicación con el backend  
+├── bloc/               # Lógica de negocio con eventos y estados  
+├── comp/               # Componentes reutilizables (botones, entradas, etc.)  
+├── drawer/             # Menú lateral para navegación  
+├── modelo/             # Clases modelo (Usuario, Tesis, etc.)  
+├── repository/         # Repositorio para operaciones CRUD  
+├── ui/                 # Pantallas principales  
+└── util/               # Configuraciones globales y utilidades  
+Backend (Node.js)
+El backend está implementado en Node.js utilizando Express.js como framework, con Supabase como servicio de base de datos y autenticación.
+
+Estructura del Backend:
 
 bash
 Copiar código
-flutter run
-⭐ Características Clave
-CRUD Completo: Gestión de programas, cursos, inscripciones, notas y exámenes.
-Diseño Modular: Arquitectura escalable para futuros desarrollos.
-Offline First: Funciona sin conexión a internet.
-Interfaz Intuitiva: Diseñada para maximizar la usabilidad.
-🤝 Contribución
-Los autores principales del proyecto son:
-
-Ciro Wagner
-Alex Coila
-Fabrizio Yerald Sanchez
-Para contribuir:
-
-Haz un fork del repositorio.
-Trabaja en una rama separada.
-Envía un pull request con los cambios propuestos.
-📬 Contacto
-Para más información, puedes contactar al equipo desarrollador.
+├── src/  
+│   ├── app.js           # Configuración principal del servidor  
+│   ├── config/  
+│   │   └── database.js  # Configuración de conexión a Supabase  
+│   ├── controllers/     # Controladores para cada entidad  
+│   ├── middleware/      # Middlewares de autenticación y roles  
+│   ├── routes/          # Rutas organizadas por entidad  
+│   └── utils/           # Funciones de apoyo  
+└── package.json         # Configuración del proyecto Node.js  
+Tecnologías Utilizadas
+Frontend
+Flutter: Desarrollo multiplataforma.
+Dart: Lenguaje de programación.
+Material Design: Estándar para diseño visual y UX.
+Backend
+Node.js: Servidor backend escalable.
+Express.js: Framework ligero para APIs RESTful.
+Supabase: Base de datos y autenticación.
+JWT: Autenticación segura basada en tokens.
+Despliegue
+Vercel: Hospedaje del backend.
+Instrucciones de Instalación
+Instalación del Frontend
+Clona el repositorio del frontend:
+bash
+Copiar código
+git clone https://github.com/usuario/sgtu_frontend.git  
+cd sgtu_frontend  
+Instala las dependencias:
+bash
+Copiar código
+flutter pub get  
+Ejecuta la aplicación:
+bash
+Copiar código
+flutter run  
+Instalación del Backend
+Clona el repositorio del backend:
+bash
+Copiar código
+git clone https://github.com/usuario/sgtu_backend.git  
+cd sgtu_backend  
+Instala las dependencias:
+bash
+Copiar código
+npm install  
+Configura las variables de entorno:
+Crea un archivo .env basado en .env.example con los siguientes datos:
+env
+Copiar código
+SUPABASE_URL=<URL de Supabase>  
+SUPABASE_KEY=<Clave de Supabase>  
+JWT_SECRET=<Tu clave JWT secreta>  
+Ejecuta el servidor en local:
+bash
+Copiar código
+npm start  
+Despliegue
+Frontend
+Despliegue recomendado en Firebase Hosting o Netlify.
+Backend
+Desplegado automáticamente en Vercel.
+Asegúrate de configurar correctamente las variables de entorno en Vercel.
+Contribuidores
+Nombre	Rol
+Ciro Wagner	Líder de desarrollo
+Alex Coila	Arquitectura del backend
+Fabrizio Yerald Sánchez	Diseño del frontend
+Para cualquier consulta o sugerencia, no dudes en contactarnos.
