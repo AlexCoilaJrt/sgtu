@@ -1,114 +1,95 @@
-# sgtu
+SGTU - Sistema de Gestión de Títulos Universitarios
+Una aplicación Flutter para gestionar eficientemente los títulos universitarios.
 
-A new Flutter project.
-Sistema de Gestión de Títulos Universitarios (SGTU)
-Descripción del Proyecto
-El Sistema de Gestión de Títulos Universitarios (SGTU) es una aplicación desarrollada en Flutter que permite gestionar de manera eficiente el registro, administración y consulta de información relacionada con los títulos universitarios. Este sistema está diseñado para funcionar de forma offline utilizando una base de datos local, asegurando rapidez y accesibilidad para los usuarios.
+📖 Descripción del Proyecto
+El Sistema de Gestión de Títulos Universitarios (SGTU) es una aplicación desarrollada en Flutter para administrar, registrar y consultar información relacionada con los títulos universitarios.
+Diseñado para trabajar sin conexión a internet, utiliza una base de datos local para garantizar rapidez y accesibilidad.
 
-Estructura del Proyecto
-El proyecto está organizado siguiendo una arquitectura modular basada en el patrón BLoC (Business Logic Component). Esto garantiza una separación clara entre la interfaz de usuario (UI) y la lógica del negocio, lo que facilita el mantenimiento y la escalabilidad.
+📂 Estructura del Proyecto
+El proyecto sigue una arquitectura modular basada en el patrón BLoC (Business Logic Component), lo que asegura:
 
-
-Carpetas Principales
-apis: Define las interfaces de comunicación para servicios externos (si se usaran APIs en el futuro).
-bloc: Contiene la lógica de negocios organizada en eventos, estados y blocs.
-comp: Reúne componentes reutilizables como botones, campos de entrada y barras de navegación.
-drawer: Implementa el menú lateral para la navegación.
-modelo: Incluye las clases modelo que representan la estructura de datos del proyecto.
-repository: Implementa las operaciones CRUD para interactuar con la base de datos local.
-ui: Maneja las pantallas principales y el diseño de la interfaz.
-util: Incluye utilidades y configuraciones globales.
-
-
-
-
-Tecnologías Utilizadas
-Flutter: Framework principal para desarrollar la interfaz de usuario.
+Separación entre la interfaz de usuario (UI) y la lógica de negocio.
+Fácil mantenimiento y escalabilidad.
+🔑 Carpetas Principales
+apis: Interfaces para la comunicación con servicios externos (en caso de expandir el proyecto).
+bloc: Contiene la lógica del negocio con eventos, estados y blocs.
+comp: Componentes reutilizables como botones, barras de navegación, formularios, etc.
+drawer: Implementación del menú lateral de navegación.
+modelo: Clases modelo que representan la estructura de datos.
+repository: Implementa operaciones CRUD para la base de datos local.
+ui: Pantallas y widgets para la interfaz de usuario.
+util: Funciones y configuraciones globales.
+💻 Tecnologías Utilizadas
+Flutter: Framework principal para la interfaz de usuario.
 Dart: Lenguaje de programación base del proyecto.
 Sqflite: Biblioteca para la gestión de la base de datos SQLite.
-BLoC: Patrón de diseño para la gestión del estado.
-Material Design: Principios para el diseño visual de la aplicación.
-Proceso de Desarrollo
+BLoC: Patrón para la gestión del estado.
+Material Design: Principios para un diseño visual intuitivo.
+🛠 Proceso de Desarrollo
 1. Diseño de la Arquitectura
-   El proyecto sigue el principio MVC (Modelo-Vista-Controlador) con adaptaciones del patrón BLoC para garantizar una clara separación de responsabilidades:
+   El proyecto utiliza el patrón MVC (Modelo-Vista-Controlador), adaptado con BLoC:
 
-Modelo: Define las estructuras de datos (por ejemplo, alumno, programa académico).
-Vista: Implementa las pantallas y widgets de la interfaz.
-Controlador (BLoC): Gestiona la lógica y el flujo de datos entre la vista y el modelo.
-
-
-Con base en los detalles que me has proporcionado anteriormente, prepararé un README detallado que explique el proceso general de desarrollo de un proyecto típico en Flutter con una base de datos local y el patrón BLoC. Este documento será genérico, pero adaptable a tu proyecto específico:
-
-README del Proyecto: Sistema de Gestión de Títulos Universitarios (SGTU)
-Descripción del Proyecto
-El Sistema de Gestión de Títulos Universitarios (SGTU) es una aplicación desarrollada en Flutter que permite gestionar de manera eficiente el registro, administración y consulta de información relacionada con los títulos universitarios. Este sistema está diseñado para funcionar de forma offline utilizando una base de datos local, asegurando rapidez y accesibilidad para los usuarios.
-
-Estructura del Proyecto
-El proyecto está organizado siguiendo una arquitectura modular basada en el patrón BLoC (Business Logic Component). Esto garantiza una separación clara entre la interfaz de usuario (UI) y la lógica del negocio, lo que facilita el mantenimiento y la escalabilidad.
-
-Carpetas Principales
-apis: Define las interfaces de comunicación para servicios externos (si se usaran APIs en el futuro).
-bloc: Contiene la lógica de negocios organizada en eventos, estados y blocs.
-comp: Reúne componentes reutilizables como botones, campos de entrada y barras de navegación.
-drawer: Implementa el menú lateral para la navegación.
-modelo: Incluye las clases modelo que representan la estructura de datos del proyecto.
-repository: Implementa las operaciones CRUD para interactuar con la base de datos local.
-ui: Maneja las pantallas principales y el diseño de la interfaz.
-util: Incluye utilidades y configuraciones globales.
-Tecnologías Utilizadas
-Flutter: Framework principal para desarrollar la interfaz de usuario.
-Dart: Lenguaje de programación base del proyecto.
-Sqflite: Biblioteca para la gestión de la base de datos SQLite.
-BLoC: Patrón de diseño para la gestión del estado.
-Material Design: Principios para el diseño visual de la aplicación.
-Proceso de Desarrollo
-1. Diseño de la Arquitectura
-   El proyecto sigue el principio MVC (Modelo-Vista-Controlador) con adaptaciones del patrón BLoC para garantizar una clara separación de responsabilidades:
-
-Modelo: Define las estructuras de datos (por ejemplo, alumno, programa académico).
-Vista: Implementa las pantallas y widgets de la interfaz.
-Controlador (BLoC): Gestiona la lógica y el flujo de datos entre la vista y el modelo.
+Modelo: Representa las estructuras de datos (e.g., alumno, curso).
+Vista: Pantallas y widgets para interactuar con el usuario.
+Controlador (BLoC): Maneja la lógica del negocio y el flujo de datos.
 2. Implementación de la Base de Datos
-   Se utiliza Sqflite para gestionar los datos de manera local. Las tablas principales incluyen:
+   La base de datos está diseñada para trabajar de manera local con Sqflite.
+   Tablas principales:
 
-Programas Académicos: Información sobre las carreras ofrecidas.
-Cursos: Detalles de las asignaturas.
-Inscripciones: Registro de alumnos inscritos.
-Notas: Calificaciones obtenidas.
-Exámenes de Grado: Información de evaluaciones finales.
+Programas Académicos: Carreras ofrecidas.
+Cursos: Asignaturas detalladas.
+Inscripciones: Registro de estudiantes inscritos.
+Notas: Calificaciones de los estudiantes.
+Exámenes de Grado: Evaluaciones finales.
 3. Creación de la Interfaz de Usuario
-   El diseño sigue los principios de Material Design para ofrecer una experiencia de usuario intuitiva y moderna. Las pantallas incluyen:
+   El diseño sigue los principios de Material Design, con las siguientes pantallas clave:
 
-Pantalla de inicio con acceso rápido a las funciones principales.
-Formularios para la creación y edición de registros.
-Tablas o listas para la visualización de datos.
+Inicio: Acceso rápido a las funciones principales.
+Formularios: Para crear y editar registros.
+Listados: Tablas o listas para mostrar la información almacenada.
 4. Gestión del Estado
-   El patrón BLoC se implementa para manejar la lógica del negocio y la comunicación entre la UI y la base de datos. Cada entidad tiene su propio bloc que controla:
+   Se utiliza el patrón BLoC para manejar la comunicación entre la UI y la base de datos:
 
-Eventos (como agregar, editar, eliminar).
-Estados (carga exitosa, error, etc.).
+Eventos: Acciones como agregar, editar o eliminar.
+Estados: Muestran el resultado de las acciones (éxito, error, etc.).
 5. Pruebas y Depuración
-   Se realizan pruebas unitarias y de integración para verificar:
+   El proyecto incluye pruebas para garantizar:
 
-La correcta inserción, actualización y eliminación de registros.
-La sincronización entre la interfaz y la base de datos.
-
-Instrucciones de Instalación
-Clonar el Repositorio
-
-bash
-Copiar código
-git clone https://github.com/tu-usuario/sgtu.git
-cd sgtu
-Instalar Dependencias
-Asegúrate de tener Flutter instalado en tu sistema. Luego, ejecuta:
+Correcta inserción, edición y eliminación de datos.
+Sincronización efectiva entre la interfaz y la base de datos.
+📦 Instrucciones de Instalación
+1. Clonar el Repositorio
+   bash
+   Copiar código
+   git clone https://github.com/tu-usuario/sgtu.git
+   cd sgtu
+2. Instalar Dependencias
+   Asegúrate de tener Flutter instalado y ejecuta:
 
 bash
 Copiar código
 flutter pub get
-Ejecutar la Aplicación
-Usa el siguiente comando para ejecutar la aplicación en un emulador o dispositivo físico:
+3. Ejecutar la Aplicación
+   Usa este comando para iniciar la aplicación en un emulador o dispositivo físico:
 
 bash
 Copiar código
 flutter run
+⭐ Características Clave
+CRUD Completo: Gestión de programas, cursos, inscripciones, notas y exámenes.
+Diseño Modular: Arquitectura escalable para futuros desarrollos.
+Offline First: Funciona sin conexión a internet.
+Interfaz Intuitiva: Diseñada para maximizar la usabilidad.
+🤝 Contribución
+Los autores principales del proyecto son:
+
+Ciro Wagner
+Alex Coila
+Fabrizio Yerald Sanchez
+Para contribuir:
+
+Haz un fork del repositorio.
+Trabaja en una rama separada.
+Envía un pull request con los cambios propuestos.
+📬 Contacto
+Para más información, puedes contactar al equipo desarrollador.
