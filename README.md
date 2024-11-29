@@ -2,8 +2,6 @@
 
 Una solución integral para la administración eficiente de títulos universitarios.
 
-![gaaa](sgtu-main/assests/images/welcome.png)
-
 ## Tabla de Contenidos
 - [Descripción del Proyecto](#descripcion-del-proyecto)
 - [Características Principales](#caracteristicas-principales)
@@ -51,7 +49,8 @@ El backend está implementado en Node.js utilizando Express.js como framework, c
 │   └── routes/          # Rutas organizadas por entidad  
 └── package.json         # Configuración del proyecto Node.js  
 
-Tecnologías Utilizadas
+#### Tecnologías Utilizadas
+
 
 Frontend:
 
