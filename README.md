@@ -86,11 +86,11 @@ cd sgtu_frontend
 Instala las dependencias:
 bash
 Copiar código
-flutter pub get  
+----flutter pub get  
 Ejecuta la aplicación:
 bash
 Copiar código
-flutter run  
+----flutter run  
 Instalación del Backend
 Clona el repositorio del backend:
 bash
@@ -100,7 +100,7 @@ cd sgtu_backend
 Instala las dependencias:
 bash
 Copiar código
-npm install  
+----npm install  
 Configura las variables de entorno:
 Crea un archivo .env basado en .env.example con los siguientes datos:
 env
