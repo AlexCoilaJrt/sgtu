@@ -28,36 +28,6 @@ El **Sistema de Gestión de Títulos Universitarios (SGTU)** es una plataforma q
 
 ### Frontend (Flutter)
 El frontend está construido usando Flutter y sigue una arquitectura modular basada en **BLoC** (Business Logic Component).
-
-```plaintext
-├── core/               
-├── data/               
-├── domain/                
-├── presentatio/              
-└── main.dart                 
-
-Backend (Node.js)
-
-
-El backend está implementado en Node.js utilizando Express.js como framework, con Supabase como servicio de base de datos y autenticación.
-├── src/  
-│   ├── app.js           # Configuración principal del servidor  
-│   ├── config/  
-│   │   └── database.js  # Configuración de conexión a Supabase  
-│   ├── controllers/     # Controladores para cada entidad  
-│   ├── middleware/      # Middlewares de autenticación  
-│   └── routes/          # Rutas organizadas por entidad  
-└── package.json         # Configuración del proyecto Node.js  
-
-#### Tecnologías Utilizadas
-
-
-Frontend:
-
-Flutter: Desarrollo multiplataforma.
-Dart: Lenguaje de programación.
-Material Design: Estándar para diseño visual y UX.
-
 Backend:
 
 Node.js: Servidor backend.
@@ -68,7 +38,7 @@ Supabase: Base de datos y autenticación.
 Instrucciones de Instalación
 Instalación del Frontend
 Clona el repositorio:
- git clone https://github.com/usuario/sgtu_frontend.git
+git clone https://github.com/usuario/sgtu_frontend.git
 cd sgtu_frontend
 
 
@@ -108,5 +78,35 @@ vercel login
 
 Despliega el backend:
 vercel
+```plaintext
+├── core/               
+├── data/               
+├── domain/                
+├── presentatio/              
+└── main.dart                 
+
+Backend (Node.js)
+
+
+El backend está implementado en Node.js utilizando Express.js como framework, con Supabase como servicio de base de datos y autenticación.
+├── src/  
+│   ├── app.js           # Configuración principal del servidor  
+│   ├── config/  
+│   │   └── database.js  # Configuración de conexión a Supabase  
+│   ├── controllers/     # Controladores para cada entidad  
+│   ├── middleware/      # Middlewares de autenticación  
+│   └── routes/          # Rutas organizadas por entidad  
+└── package.json         # Configuración del proyecto Node.js  
+
+#### Tecnologías Utilizadas
+
+
+Frontend:
+
+Flutter: Desarrollo multiplataforma.
+Dart: Lenguaje de programación.
+Material Design: Estándar para diseño visual y UX.
+
+
 
 Contribuidores: Ciro Wagner, Alex Coila, Fabrizio Sanchez
