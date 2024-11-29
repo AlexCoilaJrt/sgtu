@@ -28,7 +28,8 @@ El **Sistema de Gestión de Títulos Universitarios (SGTU)** es una plataforma q
 
 ### Frontend (Flutter)
 El frontend está construido usando Flutter y sigue una arquitectura modular basada en **BLoC** (Business Logic Component).
-Backend:
+
+### Backend:
 
 Node.js: Servidor backend.
 Express.js: Framework para APIs RESTful.
