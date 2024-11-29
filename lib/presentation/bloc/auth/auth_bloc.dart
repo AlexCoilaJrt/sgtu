@@ -3,6 +3,7 @@ import '../../../core/error/failures.dart';
 import '../../../domain/usecases/login_usecase.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final LoginUseCase loginUseCase;
@@ -28,7 +29,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               emit(const AuthError(message: 'Error al iniciar sesión. Por favor, inténtalo de nuevo.'));
             }
           },
-              (user) => emit(AuthSuccess(user: user)),
+              (user) {
+            // Guardar el token del usuario en caché
+            _saveUserToCache(user.token);
+            emit(AuthSuccess(user: user));
+          },
         );
       } catch (e) {
         print('Error inesperado en AuthBloc: $e');
@@ -36,8 +41,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
 
-    on<LogoutRequested>((event, emit) {
+    on<LogoutRequested>((event, emit) async {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.remove('user_token'); // Eliminar el token al hacer logout
       emit(AuthInitial());
     });
+  }
+
+  // Función para guardar el token del usuario en SharedPreferences
+  void _saveUserToCache(String userToken) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('user_token', userToken);
   }
 }
