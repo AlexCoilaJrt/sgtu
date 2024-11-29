@@ -2,7 +2,7 @@
 
 Una solución integral para la administración eficiente de títulos universitarios.
 
-![Descripción de la imagen](ruta/de/tu/welcome.png)
+![gaaa](sgtu-main/assests/images/welcome.png)
 
 ## Tabla de Contenidos
 - [Descripción del Proyecto](#descripcion-del-proyecto)
