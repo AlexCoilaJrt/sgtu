@@ -124,3 +124,64 @@ Ciro Wagner	Líder de desarrollo
 Alex Coila	Arquitectura del backend
 Fabrizio Yerald Sánchez	Diseño del frontend
 Para cualquier consulta o sugerencia, no dudes en contactarnos.
+
+
+# **Sistema de Gestión de Títulos Universitarios (SGTU)**
+Una solución integral para la administración eficiente de títulos universitarios.
+
+![SGTU Banner](https://via.placeholder.com/800x200?text=Sistema+de+Gesti%C3%B3n+de+T%C3%ADtulos+Universitarios)
+
+---
+
+## **Tabla de Contenidos**
+1. [Descripción del Proyecto](#descripción-del-proyecto)
+2. [Características Principales](#características-principales)
+3. [Arquitectura del Proyecto](#arquitectura-del-proyecto)
+    - [Frontend (Flutter)](#frontend-flutter)
+    - [Backend (Node.js)](#backend-nodejs)
+4. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+5. [Instrucciones de Instalación](#instrucciones-de-instalación)
+    - [Frontend](#instalación-del-frontend)
+    - [Backend](#instalación-del-backend)
+6. [Despliegue](#despliegue)
+7. [Contribuidores](#contribuidores)
+
+---
+
+## **Descripción del Proyecto**
+El **Sistema de Gestión de Títulos Universitarios (SGTU)** es una plataforma que combina una **aplicación Flutter** para la gestión de usuarios y datos, con un **backend en la nube** implementado en Node.js, desplegado en **Vercel** y respaldado por **Supabase**.
+
+Esta herramienta busca optimizar procesos administrativos, ofreciendo una experiencia moderna y funcional tanto offline como online.
+
+---
+
+## **Características Principales**
+✅ CRUD completo para la gestión de:
+- Usuarios
+- Programas académicos
+- Tesis
+- Evaluaciones
+
+✅ **Diseño modular** con arquitectura escalable.  
+✅ **Gestión Offline/Online** con sincronización de datos.  
+✅ **Seguridad**: Autenticación basada en JWT.  
+✅ **Despliegue en la nube** con Vercel para el backend.  
+✅ **Base de datos Supabase**, optimizada para alto rendimiento.
+
+---
+
+## **Arquitectura del Proyecto**
+
+### **Frontend (Flutter)**
+El frontend está construido usando Flutter y sigue una arquitectura modular basada en **BLoC (Business Logic Component)**.
+
+**Estructura de Carpetas:**
+```plaintext
+├── apis/               # Interfaces de comunicación con el backend  
+├── bloc/               # Lógica de negocio con eventos y estados  
+├── comp/               # Componentes reutilizables (botones, entradas, etc.)  
+├── drawer/             # Menú lateral para navegación  
+├── modelo/             # Clases modelo (Usuario, Tesis, etc.)  
+├── repository/         # Repositorio para operaciones CRUD  
+├── ui/                 # Pantallas principales  
+└── util/               # Configuraciones globales y utilidades  
