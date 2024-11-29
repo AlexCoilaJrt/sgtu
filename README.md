@@ -14,6 +14,8 @@ Una solución integral para la administración eficiente de títulos universitar
     - [Backend](#instalacion-del-backend)
 - [Despliegue](#despliegue)
 - [Contribuidores](#contribuidores)
+
+## Prototipos
 Link del Figma -> https://www.figma.com/design/hqZle30s8Er20HjZCMoHrC/SGTU---APP?node-id=0-1&t=ASldcnwnJEwnM752-1
 ## Descripción del Proyecto
 El **Sistema de Gestión de Títulos Universitarios (SGTU)** es una plataforma que combina una aplicación Flutter para la gestión de usuarios y datos, con un backend en la nube implementado en Node.js, desplegado en Vercel y respaldado por Supabase.
